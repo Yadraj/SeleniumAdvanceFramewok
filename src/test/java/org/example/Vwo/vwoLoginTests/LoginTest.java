@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
 import static org.assertj.core.api.FactoryBasedNavigableListAssert.assertThat;
+import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseTest {
 
@@ -19,10 +20,8 @@ public class LoginTest extends BaseTest {
         loginPagePom.openUrl(PropertyReader.readKey("url"));
         DashboardPage_POM dashboardPagePom = loginPagePom.loginTovwoPositive().afterLogin();
         String nameOnDasboard = dashboardPagePom.loggedInUserNameOnDashboard();
-        Assertions.assertThat(nameOnDasboard)
-                .isNotEmpty()
-                .isNotNull()
-                .contains(PropertyReader.readKey("expected_username"));
+        Assertion assertion = new Assertion();
+        assertion.assertTrue(nameOnDasboard.contains(PropertyReader.readKey("expected_username")));
 
 
 
