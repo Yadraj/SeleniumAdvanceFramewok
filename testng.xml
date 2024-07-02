@@ -4,9 +4,6 @@
     <test verbose="2" preserve-order="true" name="C:/Users/Lenovo/IdeaProjects/SeleniumAdvanceFramewok">
         <classes>
             <class name="org.example.Vwo.vwoLoginTests.LoginTest">
-                <methods>
-                    <include name="testLoginPositive"/>
-                </methods>
             </class>
         </classes>
     </test>

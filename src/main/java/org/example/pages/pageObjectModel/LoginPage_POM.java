@@ -16,6 +16,7 @@ public class LoginPage_POM extends BasePage {
      By username = By.id("login-username");
      By password = By.id("login-password");
      By sign = By.id("js-login-btn");
+     By error = By.id("js-notification-box-msg");
 
     //Page Actions
     public LoginPage_POM loginTovwoPositive() throws Exception {
@@ -23,6 +24,7 @@ public class LoginPage_POM extends BasePage {
         enterInput(username, PropertyReader.readKey("username"));
         enterInput(password,PropertyReader.readKey("password"));
         clickElement(sign);
+
         return this;             //To pass the control to dashboard page
 
 
@@ -34,12 +36,13 @@ public class LoginPage_POM extends BasePage {
     }
 
 
-    public void loginTovwoNegative() throws Exception {
+    public String loginTovwoNegative() throws Exception {
 
-        enterInput(username, PropertyReader.readKey("username"));
+        enterInput(username,"yadraj");
         enterInput(password,PropertyReader.readKey("password"));
         clickElement(sign);
-
+        visibilityOfElement(error);
+        return getElement(error).getText();
     }
 
 public DashboardPage_POM afterLogin(){

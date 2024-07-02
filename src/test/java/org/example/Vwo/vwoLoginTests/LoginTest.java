@@ -13,7 +13,7 @@ import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test(priority = 2)
     public void testLoginPositive() throws Exception {
 
         LoginPage_POM loginPagePom = new LoginPage_POM();
@@ -22,16 +22,20 @@ public class LoginTest extends BaseTest {
         String nameOnDasboard = dashboardPagePom.loggedInUserNameOnDashboard();
         Assertion assertion = new Assertion();
         assertion.assertTrue(nameOnDasboard.contains(PropertyReader.readKey("expected_username")));
+    }
 
 
+    @Test(priority = 1)
+    public void testLoginNegative() throws Exception {
 
-
-
-
-
-
-
+        LoginPage_POM loginPagePom = new LoginPage_POM();
+        loginPagePom.openUrl(PropertyReader.readKey("url"));
+        String errorString = loginPagePom.loginTovwoNegative();
+        System.out.println(errorString);
+        Assertion assertion = new Assertion();
+        assertion.assertTrue(errorString.contains(PropertyReader.readKey("error_message")));
+    }
 
     }
 
-}
+

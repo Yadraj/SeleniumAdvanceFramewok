@@ -37,7 +37,7 @@ public class BasePage {
     }
 
     public WebElement visibilityOfElement(final By elementLocator){
-        return new WebDriverWait(DriverManagerTL.getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
+        return new WebDriverWait(DriverManagerTL.getDriver(), Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
 
     }
 
