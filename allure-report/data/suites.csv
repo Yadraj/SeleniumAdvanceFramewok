@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Mon Jul 01 22:55:31 IST 2024","Mon Jul 01 22:55:31 IST 2024","2","All Test Suite","C:/Users/Lenovo/IdeaProjects/SeleniumAdvanceFramewok","org.example.Vwo.vwoLoginTests.LoginTest","org.example.Vwo.vwoLoginTests.LoginTest","setUp","setUp",""
+"passed","Tue Jul 02 07:34:04 IST 2024","Tue Jul 02 07:34:16 IST 2024","11892","All Test Suite","C:/Users/Lenovo/IdeaProjects/SeleniumAdvanceFramewok","org.example.Vwo.vwoLoginTests.LoginTest","org.example.Vwo.vwoLoginTests.LoginTest","testLoginPositive","testLoginPositive",""
